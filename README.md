@@ -22,3 +22,8 @@ notify-keyspace-events "KEA"
 Win+R 輸入 services.msc 開啟服務管理員，找到 Redis 服務，右鍵選取重新啟動。  
 ![重新啟動 Redis 服務](./images/Redis_Resetting.png)
 
+# 持久化到磁盤
+您可以配置 redis.windows-service.conf 檔案，使 Redis 將數據持久化到磁盤，以便在重新啟動後加載之前的數據。
+```
+appendonly yes
+```
